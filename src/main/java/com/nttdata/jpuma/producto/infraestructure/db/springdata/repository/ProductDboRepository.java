@@ -2,7 +2,7 @@ package com.nttdata.jpuma.producto.infraestructure.db.springdata.repository;
 
 import com.nttdata.jpuma.producto.application.repository.ProductRepository;
 import com.nttdata.jpuma.producto.domain.Product;
-import com.nttdata.jpuma.producto.infraestructure.db.springdata.mapper.ClientEntityMapper;
+import com.nttdata.jpuma.producto.infraestructure.db.springdata.mapper.ProductEntityMapper;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -15,23 +15,23 @@ public class ProductDboRepository implements ProductRepository {
 
     private final SpringDataProductRepository productoRepository;
 
-    private final ClientEntityMapper clienteMapper;
+    private final ProductEntityMapper productoMapper;
 
     @Override
     public Flux<Product> findAll(){
         return productoRepository.findAll()
-                .map(clienteMapper::toDomain);
+                .map(productoMapper::toDomain);
     }
     @Override
     public Mono<Product> findById(String id) {
         return productoRepository.findById(id)
-                .map(clienteMapper::toDomain);
+                .map(productoMapper::toDomain);
     }
 
     @Override
     public Mono<Product> save(Product producto) {
-        return productoRepository.save(clienteMapper.toDbo(producto))
-                .map(clienteMapper::toDomain);
+        return productoRepository.save(productoMapper.toDbo(producto))
+                .map(productoMapper::toDomain);
     }
 
     @Override

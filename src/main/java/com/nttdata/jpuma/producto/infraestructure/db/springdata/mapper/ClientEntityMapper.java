@@ -1,12 +1,12 @@
 package com.nttdata.jpuma.producto.infraestructure.db.springdata.mapper;
 
-import com.nttdata.jpuma.producto.domain.Product;
-import com.nttdata.jpuma.producto.infraestructure.db.springdata.dbo.ProductEntity;
+import com.nttdata.jpuma.producto.domain.Client;
+import com.nttdata.jpuma.producto.infraestructure.db.springdata.dbo.ClientEntity;
 import org.mapstruct.Mapper;
 
-@Mapper(componentModel = "spring")
+@Mapper (componentModel = "spring")
 public interface ClientEntityMapper {
 
-    Product toDomain(ProductEntity clienteEntity);
-    ProductEntity toDbo(Product product);
+    Client toDomain(ClientEntity clienteEntity);
+    ClientEntity toDbo(Client cliente);
 }

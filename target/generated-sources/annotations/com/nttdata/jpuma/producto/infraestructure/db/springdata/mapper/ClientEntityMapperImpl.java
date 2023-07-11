@@ -1,55 +1,55 @@
 package com.nttdata.jpuma.producto.infraestructure.db.springdata.mapper;
 
-import com.nttdata.jpuma.producto.domain.Product;
-import com.nttdata.jpuma.producto.infraestructure.db.springdata.dbo.ProductEntity;
+import com.nttdata.jpuma.producto.domain.Client;
+import com.nttdata.jpuma.producto.infraestructure.db.springdata.dbo.ClientEntity;
 import javax.annotation.processing.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-07-11T14:29:46-0500",
+    date = "2023-07-11T16:55:27-0500",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 17.0.7 (Microsoft)"
 )
 @Component
 public class ClientEntityMapperImpl implements ClientEntityMapper {
 
     @Override
-    public Product toDomain(ProductEntity clienteEntity) {
+    public Client toDomain(ClientEntity clienteEntity) {
         if ( clienteEntity == null ) {
             return null;
         }
 
-        Product product = new Product();
+        Client client = new Client();
 
-        product.setId( clienteEntity.getId() );
-        product.setTipoProducto( clienteEntity.getTipoProducto() );
-        product.setNombreProducto( clienteEntity.getNombreProducto() );
-        product.setComision( clienteEntity.getComision() );
-        product.setNromovimientos( clienteEntity.getNromovimientos() );
-        product.setCondicion( clienteEntity.getCondicion() );
-        product.setTipoDisponibilidad( clienteEntity.getTipoDisponibilidad() );
-        product.setDisponibilidad( clienteEntity.getDisponibilidad() );
+        client.setId( clienteEntity.getId() );
+        client.setNombreCompleto( clienteEntity.getNombreCompleto() );
+        client.setTipoDocumento( clienteEntity.getTipoDocumento() );
+        client.setNroDocumento( clienteEntity.getNroDocumento() );
+        client.setDireccion( clienteEntity.getDireccion() );
+        client.setTelefono( clienteEntity.getTelefono() );
+        client.setEmail( clienteEntity.getEmail() );
+        client.setCategoria( clienteEntity.getCategoria() );
 
-        return product;
+        return client;
     }
 
     @Override
-    public ProductEntity toDbo(Product product) {
-        if ( product == null ) {
+    public ClientEntity toDbo(Client cliente) {
+        if ( cliente == null ) {
             return null;
         }
 
-        ProductEntity productEntity = new ProductEntity();
+        ClientEntity clientEntity = new ClientEntity();
 
-        productEntity.setId( product.getId() );
-        productEntity.setTipoProducto( product.getTipoProducto() );
-        productEntity.setNombreProducto( product.getNombreProducto() );
-        productEntity.setComision( product.getComision() );
-        productEntity.setNromovimientos( product.getNromovimientos() );
-        productEntity.setCondicion( product.getCondicion() );
-        productEntity.setTipoDisponibilidad( product.getTipoDisponibilidad() );
-        productEntity.setDisponibilidad( product.getDisponibilidad() );
+        clientEntity.setId( cliente.getId() );
+        clientEntity.setNombreCompleto( cliente.getNombreCompleto() );
+        clientEntity.setTipoDocumento( cliente.getTipoDocumento() );
+        clientEntity.setNroDocumento( cliente.getNroDocumento() );
+        clientEntity.setDireccion( cliente.getDireccion() );
+        clientEntity.setTelefono( cliente.getTelefono() );
+        clientEntity.setEmail( cliente.getEmail() );
+        clientEntity.setCategoria( cliente.getCategoria() );
 
-        return productEntity;
+        return clientEntity;
     }
 }

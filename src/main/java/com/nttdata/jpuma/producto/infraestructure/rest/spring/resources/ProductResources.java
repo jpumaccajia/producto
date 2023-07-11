@@ -13,7 +13,7 @@ import reactor.core.publisher.Flux;
 @RestController
 @RequestMapping("/api/products")
 @RequiredArgsConstructor
-public class Resources {
+public class ProductResources {
 
     private final ProductService productoService;
 
