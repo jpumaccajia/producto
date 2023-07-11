@@ -21,4 +21,6 @@ public class AccountEntity {
     @ManyToOne
     @JoinColumn(name = "cliente_id")
     private ClientEntity cliente;
+
+    private Double saldo;
 }

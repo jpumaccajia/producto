@@ -80,13 +80,13 @@ public class AccountResources {
         return cuentaService.deleteCuenta(id);
     }
 
-    @GetMapping("/product/{id}/clients")
+    @GetMapping("/product/{productoId}/clients")
     public Flux<ClientDto> findClientesByProductId(@PathVariable String productoId) {
         return cuentaService.findClientesByProductId(productoId)
                 .map(clienteMapper::toDto);
     }
 
-    @GetMapping("/client/{id}/products")
+    @GetMapping("/client/{clienteId}/products")
     public Flux<ProductDto> findProductosByClientId(@PathVariable String clienteId) {
         return cuentaService.findProductosByClientId(clienteId)
                 .map(productoMapper::toDto);

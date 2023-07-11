@@ -16,7 +16,7 @@ public class ProductEntity {
     private String id;
     private String tipoProducto;
     private String nombreProducto;
-    private String comision;
+    private Double comision;
     private String nromovimientos;
     private String condicion;
     private String tipoDisponibilidad;

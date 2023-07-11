@@ -11,4 +11,5 @@ public class AccountDto {
     private String id;
     private ProductDto producto;
     private ClientDto cliente;
+    private Double saldo;
 }

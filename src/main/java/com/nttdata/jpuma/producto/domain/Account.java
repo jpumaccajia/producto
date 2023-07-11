@@ -14,4 +14,5 @@ public class Account
     private String id;
     private ProductEntity producto;
     private ClientEntity cliente;
+    private Double saldo;
 }
