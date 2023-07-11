@@ -1,0 +1,15 @@
+com\nttdata\jpuma\producto\infraestructure\rest\spring\dto\ProductDto.class
+com\nttdata\jpuma\producto\infraestructure\config\spring\SpringBootService.class
+com\nttdata\jpuma\producto\infraestructure\db\springdata\repository\SpringDataProductRepository.class
+com\nttdata\jpuma\producto\infraestructure\db\springdata\mapper\ClientEntityMapperImpl.class
+com\nttdata\jpuma\producto\infraestructure\rest\spring\mapper\ProductMapper.class
+com\nttdata\jpuma\producto\domain\Product.class
+com\nttdata\jpuma\producto\infraestructure\db\springdata\config\MongoConfig.class
+com\nttdata\jpuma\producto\infraestructure\db\springdata\dbo\ProductEntity.class
+com\nttdata\jpuma\producto\infraestructure\db\springdata\mapper\ClientEntityMapper.class
+com\nttdata\jpuma\producto\infraestructure\rest\spring\mapper\ProductMapperImpl.class
+com\nttdata\jpuma\producto\infraestructure\config\spring\SpringBootServiceConfig.class
+com\nttdata\jpuma\producto\application\service\ProductService.class
+com\nttdata\jpuma\producto\infraestructure\rest\spring\resources\Resources.class
+com\nttdata\jpuma\producto\infraestructure\db\springdata\repository\ProductDboRepository.class
+com\nttdata\jpuma\producto\application\repository\ProductRepository.class
